@@ -11,6 +11,13 @@
 ## It first checks if the inverse has already been calculated, and if so, gets the inverse
 ## from the "cache" and skips computation. Otherwise it will calculate the inverse and set
 ## the inverse in the cache via the setinverse function
+##
+## === Example usage ===
+## - Create the matrix object
+## > matrix <- makeCacheMatrix(matrix(sample(seq(from=1, to=10000, by=1), size=16), nrow=4, ncol=4))
+##
+## - Calculate the inverse
+## > cacheSolve(matrix)
 
 ## Creates the special matrix object
 makeCacheMatrix <- function(x = matrix()) {
